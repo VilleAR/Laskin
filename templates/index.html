@@ -1,0 +1,12 @@
+
+{% block content %}
+<h2>Front page</h2>
+{%if session.username%}
+
+<p> Logged in as {{session.username}}</p>
+
+{%else%}
+<p> Make a new account: </p>
+<a href="/registration">Register</a>
+{%endif%}
+{%endblock%}
