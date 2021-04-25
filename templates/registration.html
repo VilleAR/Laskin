@@ -2,16 +2,16 @@
 {% block content %}
 <h2>Registration</h2>
 
-{% if session.username %}
+{% if session.name %}
 <p> Please don't register more than user</p>
 <a href="/">Go back</a>
 
 {%else%}
-<form action="/register" method="POST"></form>
+<form action="/register" method="POST">
 <h3> Registration</h3>
 <p>Enter username and password:</p>
 <p>Username:<br>
-<input type="text" name="username"></p>
+<input type="text" name="name"></p>
 <p>Password:<br>
 <input type="password" name="password"></p>
 <input type="submit" value="Register">

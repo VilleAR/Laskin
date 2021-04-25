@@ -1,0 +1,9 @@
+<h2>Home page</h2>
+{%if session.name%}
+Hello {{session.name}}
+
+<a href="/logout">Log out</a>
+{%else%}
+Please <a href="/">Log in</a> or <a href="/registration">Register</a>
+<p></p>
+{%endif%}
