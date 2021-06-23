@@ -5,7 +5,8 @@
 {% if session.name %}
 <p> Please don't register more than user</p>
 <a href="/">Go back</a>
-
+<hr>
+<a href="/logout">Log out</a>
 {%else%}
 <form action="/register" method="POST">
 <h3> Registration</h3>

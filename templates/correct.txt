@@ -1,0 +1,1 @@
+<p>{{ans}} was the correct answer! You now have {{score}} points. </p>

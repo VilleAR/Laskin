@@ -1,0 +1,17 @@
+<h2>Question: {{ question  }}</h2>
+
+<p> Enter your answer below:</p>
+<script>
+function get() {
+  alert("The answer was submitted. (This notification is super annoying but shows that I can do it)");
+}
+</script>
+<form onsubmit="get()" action="/answer" method="POST">
+<input type="text" name="answer">
+<input type="hidden" name="id" value={{ id }}>
+<input type="hidden" name="name" value="{{session.name}}">
+<input type="submit" value="Submit">
+</form>
+{%if session.guess%}
+<p>{{session.guess}} is not the correct answer.</p>
+{%endif%}

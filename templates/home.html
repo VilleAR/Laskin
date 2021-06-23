@@ -1,8 +1,14 @@
 <h2>Home page</h2>
 {%if session.name%}
 Hello {{session.name}}
+<p>Choose a category:</p>
+<p><a href="/math">Mathematical puzzles</a></p>
+<p><a href="/quotes">Famous quotes and history knowledge</a></p>
+<p><a href="/comb">Combination puzzles</a></p>
 
-<a href="/logout">Log out</a>
+<p></p>
+<hr>
+<p><a href="/logout">Log out</a></p>
 {%else%}
 Please <a href="/">Log in</a> or <a href="/registration">Register</a>
 <p></p>

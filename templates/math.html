@@ -1,0 +1,26 @@
+<h2>Math problems!</h2>
+
+<p>Though the questions may have multiple possible answers, there should always be only one answer that's also an integer (i.e. not a complex number and not a fraction).
+     Please enter this number as the solution.</p>
+
+<br> 
+<h3> Problems: </h3>
+{% if session.name %}
+<a href="/new" style="font: italic bold 13px Times_New_roman;
+text-decoration: none;
+background-color: #EEEEEE;
+color: #333333;
+padding: 4px 12px 4px 12px;
+border-top: 3px solid #CCCCCC;
+border-right: 3px solid #333333;
+border-bottom: 3px solid #333333;
+border-left: 3px solid #CCCCCC;">Submit new problem</a>
+{% endif %}
+
+{% set order_rev=False %}
+{% for question in questions %}
+<h5> Question: {{question[1]}}</h5> <br>
+<a href="/math/{{ question[0] }}">Give an answer</a> 
+<p></p>
+Created: {{ question[3].strftime("%Y-%m-%d %H:%M:%S") }} <br>
+{%endfor%}

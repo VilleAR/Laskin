@@ -3,9 +3,9 @@
 {% block title %}Front page{% endblock %}
 {% block content %}
 <h2>Front page</h2>
-{% if session.username %}
+{% if session.name %}
 
-<p> Logged in as {{ session.username }}</p>
+<p> Logged in as {{ session.name }}</p>
 <a href="/home">Continue</a>
 {%else%}
 <form action="/login" method="POST">
